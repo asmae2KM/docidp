@@ -10,7 +10,7 @@ from .errors import ConfigError
 
 _PROVIDER_DEFAULTS = {
     # Groq vision models are "preview" and rotate: check https://console.groq.com/docs/vision and set VISION_MODEL.
-    "groq": {"router": "openai/gpt-oss-120b", "extractor": "openai/gpt-oss-20b", "vision": "qwen/qwen3.6-27b"},
+    "groq": {"router": "openai/gpt-oss-120b", "extractor": "openai/gpt-oss-20b", "vision": "qwen/qwen3.8-27b"},
     "openai": {"router": "gpt-4o-mini", "extractor": "gpt-4o-mini", "vision": "gpt-4o-mini"},
 }
 _PDF_PARSERS = {"auto", "pypdf", "marker"}
@@ -42,7 +42,7 @@ class Settings:
     router_model: str = "openai/gpt-oss-120b"
     extractor_model: str = "openai/gpt-oss-20b"
     vision_provider: str = "groq"  # groq | openai (independent of text_provider)
-    vision_model: str = "qwen/qwen3.6-27b"
+    vision_model: str = "qwen/qwen3.8-27b"
     temperature: float = 0.0
     pdf_parser: str = "auto"  # auto | pypdf | marker
     max_repairs: int = 2  # extra extraction attempts after a failed validation

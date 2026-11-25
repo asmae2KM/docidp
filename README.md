@@ -1,6 +1,6 @@
 # docidp — document extraction with routing, validation and self-repair
 
-[![CI](https://github.com/<you>/<repo>/actions/workflows/ci.yml/badge.svg)](https://github.com/<you>/<repo>/actions)
+[![CI](https://github.com/asmae2KM/docidp/actions/workflows/ci.yml/badge.svg)](https://github.com/asmae2KM/docidp/actions)
 
 Turns invoices, receipts and other documents (PDFs and photos/scans) into **validated structured records** (Excel / JSON).
 An LLM router picks the right specialist schema, a deterministic verifier checks the result (totals add up, dates parse,
@@ -92,6 +92,7 @@ _No live run has been committed yet. Run `make eval` with your API keys and this
 - The router's `confidence` is self-reported and poorly calibrated; it is only used as a review trigger.
 - Invoices with discounts or shipping lines may fail the `subtotal + tax = total` check; those become review flags, not silent changes.
 - Groq's vision models are **previews** that rotate; if `VISION_MODEL` stops working, pick a current one from the Groq docs. Free-plan token caps are per minute, so use `--delay` for benchmark runs.
+- If `marker-pdf` is installed, `PDF_PARSER=auto` uses it, and on CPU that takes **minutes per PDF** (first run also downloads models). Set `PDF_PARSER=pypdf` for text PDFs and for benchmark runs.
 - Scanned PDFs need the `marker` extra (or upload page images). Documents are sent to third-party LLM APIs: don't use real sensitive data without a data-processing agreement, or point `TEXT_PROVIDER` at a model you host.
 
 ## Project layout
@@ -100,7 +101,7 @@ _No live run has been committed yet. Run `make eval` with your API keys and this
 docidp/               library: config, schemas, prompts, parsers, llm backend, validators, pipeline, export, cli
 app.py                Streamlit UI
 evaluation/           dataset generator, metrics, runner (+ committed synthetic dataset)
-tests/                121 tests, no network: scripted + oracle backends, fake marker CLI, Streamlit AppTest
+tests/                123 tests, no network: scripted + oracle backends, mocked marker subprocess, Streamlit AppTest
 docs/ARCHITECTURE.md  design decisions, threat model
 ```
 

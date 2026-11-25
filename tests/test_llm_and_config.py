@@ -75,15 +75,15 @@ def test_one_groq_key_is_enough_for_text_and_images():
     be = LangChainBackend(Settings(), env={"GROQ_API_KEY": "k"})
     _, text_model = be._chat_model("extractor", is_image=False)
     _, vision_model = be._chat_model("extractor", is_image=True)
-    assert text_model.model_name == "openai/gpt-oss-20b" and vision_model.model_name == "qwen/qwen3.6-27b"
+    assert text_model.model_name == "openai/gpt-oss-20b" and vision_model.model_name == "qwen/qwen3.8-27b"
     assert type(vision_model).__name__ == "ChatGroq"
 
 
 def test_vision_provider_and_model_are_configurable():
     s = Settings.from_env({"VISION_PROVIDER": "openai"})
     assert (s.vision_provider, s.vision_model) == ("openai", "gpt-4o-mini")
-    s = Settings.from_env({"VISION_MODEL": "qwen/qwen3.8-27b", "LLM_TEMPERATURE": "0.3"})
-    assert (s.vision_provider, s.vision_model, s.temperature) == ("groq", "qwen/qwen3.8-27b", 0.3)
+    s = Settings.from_env({"VISION_MODEL": "some/other-vision-model", "LLM_TEMPERATURE": "0.3"})
+    assert (s.vision_provider, s.vision_model, s.temperature) == ("groq", "some/other-vision-model", 0.3)
     with pytest.raises(ConfigError):
         Settings.from_env({"VISION_PROVIDER": "gemini"})
 
@@ -171,3 +171,17 @@ def test_route_confidence_is_normalised():
 
     mk = lambda c: RouteDecision(document_type="invoice", confidence=c, reasoning="r").confidence  # noqa: E731
     assert mk(85) == 0.85 and mk(None) == 0.5 and mk(-3) == 0.0 and mk("0.7") == 0.7 and mk(0.4) == 0.4
+
+
+def test_retired_model_gives_actionable_error_without_retrying(monkeypatch):
+    """Regression: Groq retired qwen/qwen3.6-27b; the user must be told which setting to change."""
+    from docidp.errors import ExtractionError
+
+    gone = RuntimeError("Error code: 404 - {'error': {'code': 'model_not_found'}}")
+    chain = FakeChain([gone, gone])
+    be = backend_with(chain, monkeypatch)
+    with pytest.raises(ExtractionError, match="VISION_MODEL") as exc:
+        be.route(Document("a.png", "image", "QUJD"))
+    assert "console.groq.com/docs/models" in str(exc.value) and be.calls == 1  # no wasted second attempt
+    with pytest.raises(ExtractionError, match="ROUTER_MODEL"):
+        backend_with(FakeChain([gone]), monkeypatch).route(Document("a.pdf", "text", "x"))

@@ -73,7 +73,7 @@ class LangChainBackend:
             self._chains[chain_key] = model.with_structured_output(schema, method="function_calling")
         return self._chains[chain_key]
 
-    def _invoke(self, chain, messages, what: str):
+    def _invoke(self, chain, messages, what: str, model_var: str = "the model setting"):
         last: Optional[Exception] = None
         for attempt in range(2):  # SDK already retries network/429; this retries malformed tool output
             try:
@@ -84,6 +84,13 @@ class LangChainBackend:
                 return result
             except Exception as exc:  # noqa: BLE001 - provider SDKs raise many types
                 last = exc
+                if "model_not_found" in str(exc) or "does not exist" in str(exc):
+                    # Providers retire preview models: retrying is pointless, tell the user how to fix it.
+                    raise ExtractionError(
+                        f"{what} failed: the model is unavailable (retired or no access). "
+                        f"Set {model_var} in your .env to a current model "
+                        f"(Groq: https://console.groq.com/docs/models). Provider said: {exc}"
+                    ) from exc
                 time.sleep(0.5 * (attempt + 1))
         raise ExtractionError(f"{what} failed: {last}") from last
 
@@ -108,7 +115,7 @@ class LangChainBackend:
         user = build_user_text(is_image=doc.is_image, content=sample)
         chain = self._structured("router", doc.is_image, RouteDecision)
         messages = self._messages(ROUTER_SYSTEM, user, doc, self.settings.vision_provider)
-        return self._invoke(chain, messages, "routing")
+        return self._invoke(chain, messages, "routing", "VISION_MODEL" if doc.is_image else "ROUTER_MODEL")
 
     def extract(self, doc: Document, doc_type: str, instruction: str = "", feedback: Optional[str] = None) -> BaseModel:
         schema = SCHEMA_REGISTRY[doc_type]
@@ -120,4 +127,5 @@ class LangChainBackend:
         )
         chain = self._structured("extractor", doc.is_image, schema)
         messages = self._messages(extractor_system(doc_type), user, doc, self.settings.vision_provider)
-        return self._invoke(chain, messages, f"{doc_type} extraction")
+        model_var = "VISION_MODEL" if doc.is_image else "EXTRACTOR_MODEL"
+        return self._invoke(chain, messages, f"{doc_type} extraction", model_var)
