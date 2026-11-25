@@ -1,0 +1,13 @@
+# Exact versions this project was tested with (Python 3.12). `pip install -e ".[dev]"` accepts wider ranges.
+pydantic==2.14.4
+pandas==3.1.1
+openpyxl==3.1.5
+pillow==13.0.0
+pypdf==7.1.1
+python-dotenv==1.2.4
+langchain-core==1.8.3
+langchain-groq==1.2.1
+langchain-openai==1.8.3
+streamlit==1.67.0
+# Optional, heavy (PyTorch): layout-aware parsing + OCR for scanned PDFs
+#   pip install "marker-pdf>=1.0"

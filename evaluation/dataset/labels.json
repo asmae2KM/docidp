@@ -1,0 +1,943 @@
+{
+  "version": 1,
+  "seed": 42,
+  "synthetic": true,
+  "documents": [
+    {
+      "id": "inv-001",
+      "file": "files/inv-001.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-en"
+      ],
+      "records": [
+        {
+          "invoice_number": "INV-2025-323",
+          "issue_date": "2025-01-26",
+          "vendor_name": "Northwind Traders LLC",
+          "subtotal": 7610.0,
+          "tax_amount": 1522.0,
+          "total_due": 9132.0,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "inv-002",
+      "file": "files/inv-002.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-fr"
+      ],
+      "records": [
+        {
+          "invoice_number": "FA-6635",
+          "issue_date": "2026-04-05",
+          "vendor_name": "Casablanca Freight & Co.",
+          "subtotal": 7057.0,
+          "tax_amount": 1411.4,
+          "total_due": 8468.4,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "inv-003",
+      "file": "files/inv-003.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-de"
+      ],
+      "records": [
+        {
+          "invoice_number": "RE-2026-93320",
+          "issue_date": "2026-07-20",
+          "vendor_name": "Casablanca Freight & Co.",
+          "subtotal": 4342.0,
+          "tax_amount": 303.94,
+          "total_due": 4645.94,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "inv-004",
+      "file": "files/inv-004.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-us"
+      ],
+      "records": [
+        {
+          "invoice_number": "US-62581",
+          "issue_date": "2025-08-03",
+          "vendor_name": "Nordlicht Software AG",
+          "subtotal": 13172.0,
+          "tax_amount": 922.04,
+          "total_due": 14094.04,
+          "currency": "USD"
+        }
+      ]
+    },
+    {
+      "id": "inv-005",
+      "file": "files/inv-005.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-en"
+      ],
+      "records": [
+        {
+          "invoice_number": "INV-2025-864",
+          "issue_date": "2025-08-05",
+          "vendor_name": "EuroTech Automation GmbH",
+          "subtotal": 5242.0,
+          "tax_amount": 1048.4,
+          "total_due": 6290.4,
+          "currency": "GBP"
+        }
+      ]
+    },
+    {
+      "id": "inv-006",
+      "file": "files/inv-006.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-fr"
+      ],
+      "records": [
+        {
+          "invoice_number": "FA-1188",
+          "issue_date": "2025-04-23",
+          "vendor_name": "Maghreb Logistics SARL",
+          "subtotal": 3972.0,
+          "tax_amount": 794.4,
+          "total_due": 4766.4,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "inv-007",
+      "file": "files/inv-007.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-de"
+      ],
+      "records": [
+        {
+          "invoice_number": "RE-2025-80697",
+          "issue_date": "2025-06-11",
+          "vendor_name": "EuroTech Automation GmbH",
+          "subtotal": 4834.0,
+          "tax_amount": 918.46,
+          "total_due": 5752.46,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "inv-008",
+      "file": "files/inv-008.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-us"
+      ],
+      "records": [
+        {
+          "invoice_number": "US-82063",
+          "issue_date": "2026-05-16",
+          "vendor_name": "Iberia Components S.L.",
+          "subtotal": 293.0,
+          "tax_amount": 20.51,
+          "total_due": 313.51,
+          "currency": "USD"
+        }
+      ]
+    },
+    {
+      "id": "inv-009",
+      "file": "files/inv-009.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-en"
+      ],
+      "records": [
+        {
+          "invoice_number": "INV-2026-165",
+          "issue_date": "2026-06-25",
+          "vendor_name": "CloudCore Systems Inc.",
+          "subtotal": 10422.0,
+          "tax_amount": 2084.4,
+          "total_due": 12506.4,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "inv-010",
+      "file": "files/inv-010.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-fr"
+      ],
+      "records": [
+        {
+          "invoice_number": "FA-8744",
+          "issue_date": "2025-03-11",
+          "vendor_name": "Atlas Industrial Supplies",
+          "subtotal": 4410.0,
+          "tax_amount": 882.0,
+          "total_due": 5292.0,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "inv-011",
+      "file": "files/inv-011.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-de"
+      ],
+      "records": [
+        {
+          "invoice_number": "RE-2025-65296",
+          "issue_date": "2025-12-29",
+          "vendor_name": "Maghreb Logistics SARL",
+          "subtotal": 1390.0,
+          "tax_amount": 264.1,
+          "total_due": 1654.1,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "inv-012",
+      "file": "files/inv-012.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-us"
+      ],
+      "records": [
+        {
+          "invoice_number": "US-61173",
+          "issue_date": "2025-03-19",
+          "vendor_name": "Bluewave Consulting Ltd",
+          "subtotal": 1799.0,
+          "tax_amount": 112.44,
+          "total_due": 1911.44,
+          "currency": "USD"
+        }
+      ]
+    },
+    {
+      "id": "inv-013",
+      "file": "files/inv-013.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-en"
+      ],
+      "records": [
+        {
+          "invoice_number": "INV-2025-158",
+          "issue_date": "2025-10-20",
+          "vendor_name": "EuroTech Automation GmbH",
+          "subtotal": 2870.0,
+          "tax_amount": 574.0,
+          "total_due": 3444.0,
+          "currency": "GBP"
+        }
+      ]
+    },
+    {
+      "id": "inv-014",
+      "file": "files/inv-014.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-fr"
+      ],
+      "records": [
+        {
+          "invoice_number": "FA-6147",
+          "issue_date": "2025-03-11",
+          "vendor_name": "Maghreb Logistics SARL",
+          "subtotal": 10021.0,
+          "tax_amount": 2004.2,
+          "total_due": 12025.2,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "inv-015",
+      "file": "files/inv-015.jpg",
+      "modality": "image",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-en",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "invoice_number": "INV-2026-235",
+          "issue_date": "2026-04-14",
+          "vendor_name": "Northwind Traders LLC",
+          "subtotal": 1910.0,
+          "tax_amount": 382.0,
+          "total_due": 2292.0,
+          "currency": "GBP"
+        }
+      ]
+    },
+    {
+      "id": "inv-016",
+      "file": "files/inv-016.png",
+      "modality": "image",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-fr",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "invoice_number": "FA-4335",
+          "issue_date": "2025-01-09",
+          "vendor_name": "Northwind Traders LLC",
+          "subtotal": 3921.0,
+          "tax_amount": 784.2,
+          "total_due": 4705.2,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "inv-017",
+      "file": "files/inv-017.jpg",
+      "modality": "image",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-de",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "invoice_number": "RE-2025-86350",
+          "issue_date": "2025-12-08",
+          "vendor_name": "Atlas Industrial Supplies",
+          "subtotal": 6640.0,
+          "tax_amount": 464.8,
+          "total_due": 7104.8,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "inv-018",
+      "file": "files/inv-018.png",
+      "modality": "image",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "layout-us",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "invoice_number": "US-24168",
+          "issue_date": "2025-08-04",
+          "vendor_name": "Atlas Industrial Supplies",
+          "subtotal": 6612.0,
+          "tax_amount": 413.25,
+          "total_due": 7025.25,
+          "currency": "USD"
+        }
+      ]
+    },
+    {
+      "id": "inv-019",
+      "file": "files/inv-019.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "multi-record"
+      ],
+      "records": [
+        {
+          "invoice_number": "INV-2026-891",
+          "issue_date": "2026-04-17",
+          "vendor_name": "Kenitra Precision Tooling",
+          "subtotal": 3213.0,
+          "tax_amount": 642.6,
+          "total_due": 3855.6,
+          "currency": "MAD"
+        },
+        {
+          "invoice_number": "FA-5173",
+          "issue_date": "2025-09-29",
+          "vendor_name": "CloudCore Systems Inc.",
+          "subtotal": 4295.0,
+          "tax_amount": 859.0,
+          "total_due": 5154.0,
+          "currency": "EUR"
+        },
+        {
+          "invoice_number": "RE-2026-65108",
+          "issue_date": "2026-01-08",
+          "vendor_name": "Northwind Traders LLC",
+          "subtotal": 1062.0,
+          "tax_amount": 201.78,
+          "total_due": 1263.78,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "inv-020",
+      "file": "files/inv-020.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "multi-record"
+      ],
+      "records": [
+        {
+          "invoice_number": "FA-9375",
+          "issue_date": "2025-11-05",
+          "vendor_name": "Iberia Components S.L.",
+          "subtotal": 5796.0,
+          "tax_amount": 1159.2,
+          "total_due": 6955.2,
+          "currency": "EUR"
+        },
+        {
+          "invoice_number": "RE-2025-64321",
+          "issue_date": "2025-12-10",
+          "vendor_name": "Sahara Solar SARL",
+          "subtotal": 1155.0,
+          "tax_amount": 80.85,
+          "total_due": 1235.85,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "inv-021",
+      "file": "files/inv-021.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "multi-record"
+      ],
+      "records": [
+        {
+          "invoice_number": "RE-2026-70901",
+          "issue_date": "2026-05-22",
+          "vendor_name": "Rabat Digital Agency",
+          "subtotal": 1261.0,
+          "tax_amount": 239.59,
+          "total_due": 1500.59,
+          "currency": "EUR"
+        },
+        {
+          "invoice_number": "US-20155",
+          "issue_date": "2025-11-21",
+          "vendor_name": "Sahara Solar SARL",
+          "subtotal": 10357.0,
+          "tax_amount": 724.99,
+          "total_due": 11081.99,
+          "currency": "USD"
+        }
+      ]
+    },
+    {
+      "id": "inv-022",
+      "file": "files/inv-022.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "prompt-injection"
+      ],
+      "records": [
+        {
+          "invoice_number": "INV-2025-823",
+          "issue_date": "2025-08-29",
+          "vendor_name": "Rabat Digital Agency",
+          "subtotal": 7589.0,
+          "tax_amount": 1517.8,
+          "total_due": 9106.8,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "inv-023",
+      "file": "files/inv-023.pdf",
+      "modality": "text",
+      "expected_type": "invoice",
+      "tags": [
+        "invoice",
+        "prompt-injection"
+      ],
+      "records": [
+        {
+          "invoice_number": "FA-7865",
+          "issue_date": "2025-07-31",
+          "vendor_name": "Casablanca Freight & Co.",
+          "subtotal": 5051.0,
+          "tax_amount": 1010.2,
+          "total_due": 6061.2,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "rec-001",
+      "file": "files/rec-001.jpg",
+      "modality": "image",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "store_name": "Tesco Express Leeds",
+          "transaction_time": "2025-01-30 13:21",
+          "items_bought": [
+            "Orange Juice",
+            "Mineral Water",
+            "Baguette",
+            "Notebook A5",
+            "USB-C Hub"
+          ],
+          "subtotal": 320.0,
+          "tax_amount": 64.0,
+          "total_paid": 384.0,
+          "currency": "GBP"
+        }
+      ]
+    },
+    {
+      "id": "rec-002",
+      "file": "files/rec-002.png",
+      "modality": "image",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "store_name": "Decathlon Morocco",
+          "transaction_time": "2025-02-21 11:24",
+          "items_bought": [
+            "Running Shoes",
+            "Basmati Rice 1kg",
+            "Sports Socks",
+            "Croissant Beurre",
+            "Orange Juice"
+          ],
+          "subtotal": 474.0,
+          "tax_amount": 94.8,
+          "total_paid": 568.8,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "rec-003",
+      "file": "files/rec-003.jpg",
+      "modality": "image",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "store_name": "Cafe Paul Rabat",
+          "transaction_time": "2025-02-11 19:01",
+          "items_bought": [
+            "USB-C Hub",
+            "Mineral Water"
+          ],
+          "subtotal": 187.0,
+          "tax_amount": 18.7,
+          "total_paid": 205.7,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "rec-004",
+      "file": "files/rec-004.png",
+      "modality": "image",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "store_name": "Electroplanet",
+          "transaction_time": "2026-01-13 09:38",
+          "items_bought": [
+            "Notebook A5",
+            "Mineral Water"
+          ],
+          "subtotal": 26.0,
+          "tax_amount": 5.2,
+          "total_paid": 31.2,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "rec-005",
+      "file": "files/rec-005.jpg",
+      "modality": "image",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "store_name": "Corner Deli NYC",
+          "transaction_time": "2026-02-11 18:12",
+          "items_bought": [
+            "Espresso Beans",
+            "Orange Juice",
+            "Croissant Beurre"
+          ],
+          "subtotal": 115.0,
+          "tax_amount": 23.0,
+          "total_paid": 138.0,
+          "currency": "USD"
+        }
+      ]
+    },
+    {
+      "id": "rec-006",
+      "file": "files/rec-006.png",
+      "modality": "image",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "store_name": "Cafe Paul Rabat",
+          "transaction_time": "2026-06-03 17:21",
+          "items_bought": [
+            "Basmati Rice 1kg",
+            "Baguette",
+            "Espresso Beans",
+            "Sports Socks",
+            "Running Shoes"
+          ],
+          "subtotal": 631.0,
+          "tax_amount": null,
+          "total_paid": 631.0,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "rec-007",
+      "file": "files/rec-007.jpg",
+      "modality": "image",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "store_name": "Tesco Express Leeds",
+          "transaction_time": "2026-04-22 13:52",
+          "items_bought": [
+            "Running Shoes",
+            "Cappuccino",
+            "Espresso Beans",
+            "Croissant Beurre"
+          ],
+          "subtotal": 589.0,
+          "tax_amount": 58.9,
+          "total_paid": 647.9,
+          "currency": "GBP"
+        }
+      ]
+    },
+    {
+      "id": "rec-008",
+      "file": "files/rec-008.png",
+      "modality": "image",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt",
+        "noisy-image"
+      ],
+      "records": [
+        {
+          "store_name": "Boulangerie La Parisienne",
+          "transaction_time": "2025-12-30 19:16",
+          "items_bought": [
+            "Pain au Chocolat",
+            "Olive Oil 1L",
+            "Basmati Rice 1kg",
+            "Cappuccino"
+          ],
+          "subtotal": 118.0,
+          "tax_amount": 11.8,
+          "total_paid": 129.8,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "rec-009",
+      "file": "files/rec-009.pdf",
+      "modality": "text",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt"
+      ],
+      "records": [
+        {
+          "store_name": "Tesco Express Leeds",
+          "transaction_time": "2026-04-04 19:01",
+          "items_bought": [
+            "Sports Socks",
+            "Orange Juice",
+            "Cappuccino"
+          ],
+          "subtotal": 85.0,
+          "tax_amount": 8.5,
+          "total_paid": 93.5,
+          "currency": "GBP"
+        }
+      ]
+    },
+    {
+      "id": "rec-010",
+      "file": "files/rec-010.pdf",
+      "modality": "text",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt"
+      ],
+      "records": [
+        {
+          "store_name": "Carrefour Market Lyon",
+          "transaction_time": "2026-03-12 18:35",
+          "items_bought": [
+            "Croissant Beurre",
+            "Basmati Rice 1kg",
+            "Notebook A5",
+            "Cappuccino",
+            "Espresso Beans"
+          ],
+          "subtotal": 159.0,
+          "tax_amount": 31.8,
+          "total_paid": 190.8,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "rec-011",
+      "file": "files/rec-011.pdf",
+      "modality": "text",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt"
+      ],
+      "records": [
+        {
+          "store_name": "Boulangerie La Parisienne",
+          "transaction_time": "2025-08-10 18:30",
+          "items_bought": [
+            "Espresso Beans",
+            "Cappuccino",
+            "Croissant Beurre",
+            "Notebook A5"
+          ],
+          "subtotal": 112.0,
+          "tax_amount": 22.4,
+          "total_paid": 134.4,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "rec-012",
+      "file": "files/rec-012.pdf",
+      "modality": "text",
+      "expected_type": "receipt",
+      "tags": [
+        "receipt"
+      ],
+      "records": [
+        {
+          "store_name": "Electroplanet",
+          "transaction_time": "2025-02-16 07:35",
+          "items_bought": [
+            "Wireless Mouse",
+            "Notebook A5",
+            "Baguette"
+          ],
+          "subtotal": 132.0,
+          "tax_amount": 13.2,
+          "total_paid": 145.2,
+          "currency": "MAD"
+        }
+      ]
+    },
+    {
+      "id": "gen-001",
+      "file": "files/gen-001.pdf",
+      "modality": "text",
+      "expected_type": "general",
+      "tags": [
+        "general"
+      ],
+      "records": [
+        {
+          "document_title": "CONSULTING SERVICES AGREEMENT",
+          "creation_date": "2026-03-28"
+        }
+      ]
+    },
+    {
+      "id": "gen-002",
+      "file": "files/gen-002.pdf",
+      "modality": "text",
+      "expected_type": "general",
+      "tags": [
+        "general"
+      ],
+      "records": [
+        {
+          "document_title": "MEETING MINUTES - Q3 PLANNING",
+          "creation_date": "2025-02-22"
+        }
+      ]
+    },
+    {
+      "id": "gen-003",
+      "file": "files/gen-003.pdf",
+      "modality": "text",
+      "expected_type": "general",
+      "tags": [
+        "general"
+      ],
+      "records": []
+    },
+    {
+      "id": "gen-004",
+      "file": "files/gen-004.pdf",
+      "modality": "text",
+      "expected_type": "general",
+      "tags": [
+        "general"
+      ],
+      "records": []
+    },
+    {
+      "id": "gen-005",
+      "file": "files/gen-005.pdf",
+      "modality": "text",
+      "expected_type": "general",
+      "tags": [
+        "general"
+      ],
+      "records": []
+    },
+    {
+      "id": "gen-006",
+      "file": "files/gen-006.pdf",
+      "modality": "text",
+      "expected_type": "general",
+      "tags": [
+        "general",
+        "hard-negative"
+      ],
+      "records": [
+        {
+          "document_title": "PURCHASE ORDER",
+          "creation_date": "2025-06-05"
+        }
+      ]
+    },
+    {
+      "id": "gen-007",
+      "file": "files/gen-007.pdf",
+      "modality": "text",
+      "expected_type": "general",
+      "tags": [
+        "general",
+        "hard-negative"
+      ],
+      "records": [
+        {
+          "document_title": "DELIVERY NOTE",
+          "creation_date": "2025-03-29"
+        }
+      ]
+    },
+    {
+      "id": "gen-008",
+      "file": "files/gen-008.pdf",
+      "modality": "text",
+      "expected_type": "general",
+      "tags": [
+        "general",
+        "hard-negative"
+      ],
+      "records": [
+        {
+          "document_title": "QUOTATION",
+          "creation_date": "2026-09-13"
+        }
+      ]
+    }
+  ]
+}
